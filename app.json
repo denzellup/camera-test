@@ -1,0 +1,48 @@
+{
+  "expo": {
+    "name": "Camera Test",
+    "slug": "camera-test",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSCameraUsageDescription": "Allow $(PRODUCT_NAME) to access camera.",
+        "NSMicrophoneUsageDescription": "Allow $(PRODUCT_NAME) to access your microphone"
+      },
+      "bundleIdentifier": "com.denzellup.cameratest"
+    },
+    "android": {
+      "permissions": [
+        "android.permission.CAMERA"
+      ],
+      "package": "com.denzellup.cameratest"
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      [
+        "expo-barcode-scanner",
+        {
+          "cameraPermission": "Allow $(PRODUCT_NAME) to access camera."
+        }
+      ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "b3db4a9e-2e26-4237-a94b-c45c7cc760cd"
+      }
+    }
+  }
+}
